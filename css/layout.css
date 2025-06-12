@@ -183,7 +183,7 @@ section {
   height: auto;
 }
 
-/* main visual */
+/* main visual + sec2 */
 .main_visual,
 #sec2 {
   height: 100vh;
@@ -286,4 +286,52 @@ section {
   to {
     transform: translate(105vw) rotate(-360deg);
   }
+}
+
+/* sec3 */
+.sec3 {
+  padding: 200px 0;
+  text-align: center;
+}
+
+.sec_title {
+  font-size: var(--fontsize-xl);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.sec_title + p {
+  font-size: var(--fontsize-md);
+  font-weight: 200;
+  margin-bottom: 100px;
+}
+
+.icon_content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon_content > div div {
+  transition: 0.5s;
+}
+
+.icon_content > div:hover div {
+  color: var(--color-sub);
+  transform: translateY(-10px);
+}
+
+.text_bottom {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+}
+
+.text_bottom > h3 {
+  font-weight: 600;
+}
+
+.text_bottom > p {
+  font-weight: 200;
 }
