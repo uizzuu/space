@@ -184,7 +184,8 @@ section {
 }
 
 /* main visual */
-.main_visual {
+.main_visual,
+#sec2 {
   height: 100vh;
   position: relative;
   display: flex;
@@ -200,7 +201,7 @@ section {
 }
 
 .visual_text > h2 {
-  font-size: clamp(80px, 5vw, 100px);
+  font-size: clamp(80px, 4.5vw, 100px);
   line-height: 1;
   font-weight: 600;
   margin-bottom: 40px;
@@ -256,4 +257,33 @@ section {
 
 .scroll_down:hover {
   bottom: 55px;
+}
+
+/* sec2 */
+#sec2 {
+  background-color: var(--color-main);
+  overflow: hidden;
+}
+
+.rocket {
+  position: absolute;
+  font-size: clamp(80px, 4.5vw, 100px);
+
+  animation: rocket 5s linear 0.5s 1;
+  animation-play-state: paused;
+  will-change: transform;
+  left: -200px;
+}
+
+#sec2:hover .rocket {
+  animation-play-state: running;
+}
+
+@keyframes rocket {
+  from {
+    transform: translate(0px) rotate(0deg);
+  }
+  to {
+    transform: translate(105vw) rotate(-360deg);
+  }
 }
